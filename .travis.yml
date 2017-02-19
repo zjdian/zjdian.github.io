@@ -33,7 +33,7 @@ after_success:
 
 branches:
   only:
-    - blog
+    - dataonion
 cache:
   directories:
    - node_modules
