@@ -18,7 +18,7 @@ install:
   - npm install hexo-renderer-marked --save
   - npm install hexo-renderer-sass --save
   - npm install hexo-generator-searchdb --save
-  npm install -S hexo-generator-json-content@1 --save
+  - npm install -S hexo-generator-json-content@1 --save
 
 script:
   - hexo clean
