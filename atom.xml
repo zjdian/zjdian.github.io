@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>数据洋葱头</title>
+  <subtitle>像剥洋葱一样解剖数据</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://dataonion.cn/"/>
+  <updated>2017-03-14T02:40:35.369Z</updated>
+  <id>http://dataonion.cn/</id>
+  
+  <author>
+    <name>dataonion</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于数据洋葱头</title>
+    <link href="http://dataonion.cn/2017/01/29/about/"/>
+    <id>http://dataonion.cn/2017/01/29/about/</id>
+    <published>2017-01-29T20:48:27.000Z</published>
+    <updated>2017-03-14T02:40:35.369Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>数据洋葱头</strong>由一群爱好数据科学的同学创建。</p>
+<p>我们相信：</p>
+<p>数据会自己说话！<br>数据是有趣的！<br>数据是可以性感的表达的！<br>数据会是我们未来！</p>
+<p>因此数据一群志同道合的人走到了一起。因为我们相信：</p>
+<p>孤独的人是可耻的！<br>分享即学习！</p>
+<p>我们一起分享：</p>
+<p>机器学习路上遇到的坑！<br>编写Python,R,..等一切与数据有关的教程，<br>分享数据分析，机器学习案例，<br>邀请同道进行在线分享会<br>组织小组玩有趣的数据分析项目，撸Kaggle…</p>
+<p>如果你想加入，欢迎联系我们contacts# dataonion.cn (请将#替换为@)!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;数据洋葱头&lt;/strong&gt;由一群爱好数据科学的同学创建。&lt;/p&gt;
+&lt;p&gt;我们相信：&lt;/p&gt;
+&lt;p&gt;数据会自己说话！&lt;br&gt;数据是有趣的！&lt;br&gt;数据是可以性感的表达的！&lt;br&gt;数据会是我们未来！&lt;/p&gt;
+&lt;p&gt;因此数据一群志同道合的人走到了一起。因为我们相
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习与R(1)-什么是机器学习</title>
+    <link href="http://dataonion.cn/2014/08/16/2014-8-16-machine-learning-and-R(1)-what-is-machine-learning/"/>
+    <id>http://dataonion.cn/2014/08/16/2014-8-16-machine-learning-and-R(1)-what-is-machine-learning/</id>
+    <published>2014-08-16T15:29:48.000Z</published>
+    <updated>2017-03-14T02:40:35.369Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="机器学习与数据挖掘"><a href="#机器学习与数据挖掘" class="headerlink" title="机器学习与数据挖掘"></a>机器学习与数据挖掘</h1><p>智能终端的普及，传感器的大量使用，视频监控，可穿戴设备,UGC，…数据爆炸让我们进入了大数据时代，也许更确切说应该是我们的时代更容易获取数据。大量的数据可以通过机器获取，利用它们我们可以做出更好决策。<strong>机器学习</strong>某种意义上就是研究利用计算机算法来把数据转换成智能。它的产生来自于数据的可获得性，统计方法，计算能力的同步，快速发展。数据的增长，推动了计算能力的发展，进而推动分析大规模数据的统计方法的发展，三者互为动力，循环发展。</p>
+<p>与机器学习经常一起出现的就是<strong>数据挖掘了</strong>，两种经常会有重叠的地方，不过数据挖掘某种意义上更多的是关注从大量的数据中获得新的见解（insight），机器学习聚焦于进行已知的任务，而数据挖掘则是搜寻隐藏的信息。例如电商利用机器学习来决定向谁推荐什么产品，数据挖掘用来了解什么样的人喜欢什么产品。某种意义上机器学习的算法是数据挖掘的基础，反之则未必。</p>
+<h1 id="机器学习的使用与滥用"><a href="#机器学习的使用与滥用" class="headerlink" title="机器学习的使用与滥用"></a>机器学习的使用与滥用</h1><p>利用机器学习我们可以：</p>
+<ul>
+<li>预测选举</li>
+<li>垃圾邮件过滤</li>
+<li>根据路况进行自动的信号灯变换</li>
+<li>犯罪预测</li>
+<li>估计客户流失率</li>
+<li>自动导航</li>
+<li>定向广告</li>
+<li>…</li>
+</ul>
+<p>你也许也听过了Target向某用户寄尿片广告的故事？不知道？<a href="http://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/" target="_blank" rel="external">点这里看看福布斯的报道</a>,零售商已经开始利用你的购买模式，分析出你的家庭，你的收入，你的喜好，甚至你的健康….，对数据的利用已经无处不在。会员卡的信息也可以用来进行机器学习。</p>
+<p>零售商可以用机器学习来管理广告，定向促销，存货，商店布局，设置于零售商说不定以后可以根据你买的东西在结账的时候再来动态向你促销。</p>
+<p>不过数据的滥用也导致了大量的问题，个人的隐私已经无所遁形，这已经成为了一把双刃剑，我们可以在多大程度上利用这些数据，如何利用？未来是<strong>我们改变了数据还是数据改变了我们？</strong></p>
+<h1 id="机器如何学习"><a href="#机器如何学习" class="headerlink" title="机器如何学习"></a>机器如何学习</h1><p>无论人还是机器学习，无外乎三步：</p>
+<ol>
+<li>数据的输入</li>
+<li>抽象</li>
+<li>泛化</li>
+</ol>
+<p>将原始数据赋予意义的过程就是<strong>抽象</strong>，这是<strong>知识表达</strong>的基础。对计算机而言则是将输入变成一个<strong>模型</strong>，而模型的获得则是通过对数据的<strong>training</strong>来完成。为何不是学习呢？因为学习不是止于数据抽象，学习需要更进一步，将知识泛化，用于未来的新数据。Training更形象说明了，我们用模型来适配数据的过程。以上过程可以表达为：</p>
+<p>观察–&gt;数据–&gt;模型</p>
+<h2 id="泛化"><a href="#泛化" class="headerlink" title="泛化"></a>泛化</h2><p>The term generalization describes the process of turning abstracted knowledge into a form that can be utilized for action.</p>
+<p>不过在这个泛化过程我们始终存在着<strong>bias</strong>与<strong>variance</strong>，variance产生源于如果我们用不同的数据来训练，那么我们获得的模型可能有不同，另一方面bias则是在于我们用模型来适配现实问题是，模型的简化，我们不可以找到一个100%与现实中问题匹配的模型。机器学习始终都会面临bias与variance的选择，评估模型一方面我们要避免bias，另一方面我们希望variance足够小。</p>
+<h1 id="机器学习的步骤"><a href="#机器学习的步骤" class="headerlink" title="机器学习的步骤"></a>机器学习的步骤</h1><ul>
+<li>数据收集：<br>哪些数据可用，还需要收集什么数据，如何收集…</li>
+<li>探索与准备数据<br>数据的质量绝对了模型。通常这个阶段会占掉80%时间。此时你需要判断数据的模式，质量，有无异常，不是所有数据总是可获得，这时怎么处理…</li>
+<li>训练模型</li>
+<li>评估模型</li>
+<li>模型优化</li>
+<li>部署</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;机器学习与数据挖掘&quot;&gt;&lt;a href=&quot;#机器学习与数据挖掘&quot; class=&quot;headerlink&quot; title=&quot;机器学习与数据挖掘&quot;&gt;&lt;/a&gt;机器学习与数据挖掘&lt;/h1&gt;&lt;p&gt;智能终端的普及，传感器的大量使用，视频监控，可穿戴设备,UGC，…数据爆炸让我们进入
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://dataonion.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="数据科学" scheme="http://dataonion.cn/tags/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"/>
+    
+      <category term="机器学习" scheme="http://dataonion.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="R" scheme="http://dataonion.cn/tags/R/"/>
+    
+      <category term="机器学习与R" scheme="http://dataonion.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8ER/"/>
+    
+  </entry>
+  
+</feed>

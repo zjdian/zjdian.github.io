@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>机器学习与R(1)-什么是机器学习 | 数据洋葱头</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="数据科学,机器学习,R,机器学习与R" />
+    
+    <meta name="description" content="机器学习与数据挖掘智能终端的普及，传感器的大量使用，视频监控，可穿戴设备,UGC，…数据爆炸让我们进入了大数据时代，也许更确切说应该是我们的时代更容易获取数据。大量的数据可以通过机器获取，利用它们我们可以做出更好决策。机器学习某种意义上就是研究利用计算机算法来把数据转换成智能。它的产生来自于数据的可获得性，统计方法，计算能力的同步，快速发展。数据的增长，推动了计算能力的发展，进而推动分析大规模数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习与R(1)-什么是机器学习">
+<meta property="og:url" content="http://dataonion.cn/2014/08/16/2014-8-16-machine-learning-and-R(1)-what-is-machine-learning/index.html">
+<meta property="og:site_name" content="数据洋葱头">
+<meta property="og:description" content="机器学习与数据挖掘智能终端的普及，传感器的大量使用，视频监控，可穿戴设备,UGC，…数据爆炸让我们进入了大数据时代，也许更确切说应该是我们的时代更容易获取数据。大量的数据可以通过机器获取，利用它们我们可以做出更好决策。机器学习某种意义上就是研究利用计算机算法来把数据转换成智能。它的产生来自于数据的可获得性，统计方法，计算能力的同步，快速发展。数据的增长，推动了计算能力的发展，进而推动分析大规模数据">
+<meta property="og:updated_time" content="2017-03-14T02:40:35.369Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="机器学习与R(1)-什么是机器学习">
+<meta name="twitter:description" content="机器学习与数据挖掘智能终端的普及，传感器的大量使用，视频监控，可穿戴设备,UGC，…数据爆炸让我们进入了大数据时代，也许更确切说应该是我们的时代更容易获取数据。大量的数据可以通过机器获取，利用它们我们可以做出更好决策。机器学习某种意义上就是研究利用计算机算法来把数据转换成智能。它的产生来自于数据的可获得性，统计方法，计算能力的同步，快速发展。数据的增长，推动了计算能力的发展，进而推动分析大规模数据">
+    
+
+    
+        <link rel="alternate" href="/" title="数据洋葱头" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">像剥洋葱一样解剖数据</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/机器学习/">机器学习</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">关于</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/机器学习/">机器学习</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-2014-8-16-machine-learning-and-R(1)-what-is-machine-learning" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        机器学习与R(1)-什么是机器学习
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/2014/08/16/2014-8-16-machine-learning-and-R(1)-what-is-machine-learning/" class="article-date">
+    <time datetime="2014-08-16T15:29:48.000Z" itemprop="datePublished">2014-08-16</time>
+</a>
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/R/">R</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据科学/">数据科学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习/">机器学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习与R/">机器学习与R</a></li></ul>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="机器学习与数据挖掘"><a href="#机器学习与数据挖掘" class="headerlink" title="机器学习与数据挖掘"></a>机器学习与数据挖掘</h1><p>智能终端的普及，传感器的大量使用，视频监控，可穿戴设备,UGC，…数据爆炸让我们进入了大数据时代，也许更确切说应该是我们的时代更容易获取数据。大量的数据可以通过机器获取，利用它们我们可以做出更好决策。<strong>机器学习</strong>某种意义上就是研究利用计算机算法来把数据转换成智能。它的产生来自于数据的可获得性，统计方法，计算能力的同步，快速发展。数据的增长，推动了计算能力的发展，进而推动分析大规模数据的统计方法的发展，三者互为动力，循环发展。</p>
+<p>与机器学习经常一起出现的就是<strong>数据挖掘了</strong>，两种经常会有重叠的地方，不过数据挖掘某种意义上更多的是关注从大量的数据中获得新的见解（insight），机器学习聚焦于进行已知的任务，而数据挖掘则是搜寻隐藏的信息。例如电商利用机器学习来决定向谁推荐什么产品，数据挖掘用来了解什么样的人喜欢什么产品。某种意义上机器学习的算法是数据挖掘的基础，反之则未必。</p>
+<h1 id="机器学习的使用与滥用"><a href="#机器学习的使用与滥用" class="headerlink" title="机器学习的使用与滥用"></a>机器学习的使用与滥用</h1><p>利用机器学习我们可以：</p>
+<ul>
+<li>预测选举</li>
+<li>垃圾邮件过滤</li>
+<li>根据路况进行自动的信号灯变换</li>
+<li>犯罪预测</li>
+<li>估计客户流失率</li>
+<li>自动导航</li>
+<li>定向广告</li>
+<li>…</li>
+</ul>
+<p>你也许也听过了Target向某用户寄尿片广告的故事？不知道？<a href="http://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/" target="_blank" rel="external">点这里看看福布斯的报道</a>,零售商已经开始利用你的购买模式，分析出你的家庭，你的收入，你的喜好，甚至你的健康….，对数据的利用已经无处不在。会员卡的信息也可以用来进行机器学习。</p>
+<p>零售商可以用机器学习来管理广告，定向促销，存货，商店布局，设置于零售商说不定以后可以根据你买的东西在结账的时候再来动态向你促销。</p>
+<p>不过数据的滥用也导致了大量的问题，个人的隐私已经无所遁形，这已经成为了一把双刃剑，我们可以在多大程度上利用这些数据，如何利用？未来是<strong>我们改变了数据还是数据改变了我们？</strong></p>
+<h1 id="机器如何学习"><a href="#机器如何学习" class="headerlink" title="机器如何学习"></a>机器如何学习</h1><p>无论人还是机器学习，无外乎三步：</p>
+<ol>
+<li>数据的输入</li>
+<li>抽象</li>
+<li>泛化</li>
+</ol>
+<p>将原始数据赋予意义的过程就是<strong>抽象</strong>，这是<strong>知识表达</strong>的基础。对计算机而言则是将输入变成一个<strong>模型</strong>，而模型的获得则是通过对数据的<strong>training</strong>来完成。为何不是学习呢？因为学习不是止于数据抽象，学习需要更进一步，将知识泛化，用于未来的新数据。Training更形象说明了，我们用模型来适配数据的过程。以上过程可以表达为：</p>
+<p>观察–&gt;数据–&gt;模型</p>
+<h2 id="泛化"><a href="#泛化" class="headerlink" title="泛化"></a>泛化</h2><p>The term generalization describes the process of turning abstracted knowledge into a form that can be utilized for action.</p>
+<p>不过在这个泛化过程我们始终存在着<strong>bias</strong>与<strong>variance</strong>，variance产生源于如果我们用不同的数据来训练，那么我们获得的模型可能有不同，另一方面bias则是在于我们用模型来适配现实问题是，模型的简化，我们不可以找到一个100%与现实中问题匹配的模型。机器学习始终都会面临bias与variance的选择，评估模型一方面我们要避免bias，另一方面我们希望variance足够小。</p>
+<h1 id="机器学习的步骤"><a href="#机器学习的步骤" class="headerlink" title="机器学习的步骤"></a>机器学习的步骤</h1><ul>
+<li>数据收集：<br>哪些数据可用，还需要收集什么数据，如何收集…</li>
+<li>探索与准备数据<br>数据的质量绝对了模型。通常这个阶段会占掉80%时间。此时你需要判断数据的模式，质量，有无异常，不是所有数据总是可获得，这时怎么处理…</li>
+<li>训练模型</li>
+<li>评估模型</li>
+<li>模型优化</li>
+<li>部署</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+    <div class="jiathis_style">
+    <span class="jiathis_txt">分享到：</span>
+    <a class="jiathis_button_qzone">QQ空间</a>
+    <a class="jiathis_button_tsina">新浪微博</a>
+    <a class="jiathis_button_tqq">腾讯微博</a>
+    <a class="jiathis_button_weixin">微信</a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+    <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<style>
+    .jiathis_style div:first-child:not(.jiadiv_01) {
+        width: auto !important;
+        border: none !important;
+    }
+    .jiathis_style .jiadiv_01 {
+        margin: 10px 0;
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .jiathis_style .jiadiv_01 div:first-child {
+        display: none;
+    }
+    .jiathis_style .jiadiv_02 {
+        padding: 7px 0 !important;
+    }
+    .jiathis_style .jiadiv_02 .jiatitle {
+        width: 85px;
+        border: none;
+        height: auto;
+        margin: 3px 10px;
+        padding: 6px 10px;
+        border-radius: 4px;
+    }
+    .jiathis_style .jiadiv_02 .jiatitle:hover {
+        border: none;
+    }
+    .jiathis_style .jiadiv_02 .jiatitle:nth-child(even) {
+        margin-left: 0;
+    }
+    .jiathis_style .jtico:hover {
+        opacity: 1;
+    }
+    .jiathis_style .ckepopBottom,
+    .jiathis_style .centerBottom {
+        width: auto !important;
+        padding: 5px;
+        background: #f7f7f7;
+    }
+</style>
+
+
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2014/08/16/2014-8-16-machine-learning-and-R(1)-what-is-machine-learning/" data-title="机器学习与R(1)-什么是机器学习" data-url="http://dataonion.cn/2014/08/16/2014-8-16-machine-learning-and-R(1)-what-is-machine-learning/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/zjdian" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/01/29/about/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            关于数据洋葱头
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/29/about/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/01/29/about/" class="title">关于数据洋葱头</a></p>
+                            <p class="item-date"><time datetime="2017-01-29T20:48:27.000Z" itemprop="datePublished">2017-01-29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2014/08/16/2014-8-16-machine-learning-and-R(1)-what-is-machine-learning/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/机器学习/">机器学习</a></p>
+                            <p class="item-title"><a href="/2014/08/16/2014-8-16-machine-learning-and-R(1)-what-is-machine-learning/" class="title">机器学习与R(1)-什么是机器学习</a></p>
+                            <p class="item-date"><time datetime="2014-08-16T15:29:48.000Z" itemprop="datePublished">2014-08-16</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">八月 2014</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/R/">R</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据科学/">数据科学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习与R/">机器学习与R</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/R/" style="font-size: 10px;">R</a> <a href="/tags/数据科学/" style="font-size: 10px;">数据科学</a> <a href="/tags/机器学习/" style="font-size: 10px;">机器学习</a> <a href="/tags/机器学习与R/" style="font-size: 10px;">机器学习与R</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 dataonion</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'zjdian'};
+    (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
