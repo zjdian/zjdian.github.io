@@ -27,4 +27,4 @@ comments: false
 邀请同道进行在线分享会
 组织小组玩有趣的数据分析项目，撸Kaggle...
 
-如果你想加入，欢迎联系我们！
+如果你想加入，欢迎联系我们contacts# dataonion.cn (请将#替换为@)!
