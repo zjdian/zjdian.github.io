@@ -1,40 +1,30 @@
 ---
-title: Hello World
+title: 关于数据洋葱头
 date: 2017-01-29 20:48:27
 comments: false
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+**数据洋葱头**由一群爱好数据科学的同学创建。
 
-### Create a new post
+我们相信：
 
-``` bash
-$ hexo new "My New Post"
-```
+数据会自己说话！
+数据是有趣的！
+数据是可以性感的表达的！
+数据会是我们未来！
 
-More info: [Writing](https://hexo.io/docs/writing.html)
 
-### Run server
+因为数据一群志同道合的人走到了一起。因为我们相信：
 
-``` bash
-$ hexo server
-```
+孤独的人是可耻的！
+分享即学习！
 
-More info: [Server](https://hexo.io/docs/server.html)
+我们一起分享：
 
-### Generate static files
+机器学习路上遇到的坑！
+编写Python,R,..等一切与数据有关的教程，
+分析数据分析，机器学习案例，
+邀请同道进行在线分享会
+组织小组玩有趣的数据分析项目，撸Kaggle...
 
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+如果你想加入，欢迎联系我们！
